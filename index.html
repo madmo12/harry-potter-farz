@@ -7,12 +7,12 @@
     <title>Magical Academy - The Goblet of Fire</title>
     <!-- Import Arabic and Harry Potter fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&family=Cairo:wght@300;400;600&family=Changa:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <!-- Background Music -->
     <audio id="background-music" autoplay loop >
-        <source src="music/background-music.mpeg" type="audio/mpeg">
+        <source src="assets/music/background-music.mpeg" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
@@ -26,7 +26,7 @@
     <header class="main-header">
         <div class="container">
             <div class="logo-container">
-                <img src="img/logo.jpeg" alt="Magical Academy Logo">
+                <img src="assets/img/logo.jpeg" alt="Magical Academy Logo">
             </div>
             <h1 class="hp-font">The Goblet of Fire</h1>
         </div>
@@ -37,7 +37,7 @@
         <div class="hero-content">
             <h2 class="hp-font">The Goblet of Fire</h2>
             <div class="hero-logo-container">
-                <img src="img/logo.jpeg" alt="Magical Academy Logo" class="hero-logo">
+                <img src="assets/img/logo.jpeg" alt="Magical Academy Logo" class="hero-logo">
             </div>
             <div class="glasses-container">
                 <div class="wizard-glasses">
@@ -59,7 +59,7 @@
                 <div class="school-card">
                     <div class="card-frame">
                         <div class="card-image">
-                            <img src="img/gryffindor.jpeg" alt="Magical School 1">
+                            <img src="assets/img/gryffindor.jpeg" alt="Magical School 1">
                         </div>
                         <div class="card-overlay">
                             <h3 class="arabic-text">Gryffindor</h3>
@@ -69,7 +69,7 @@
                 <div class="school-card">
                     <div class="card-frame">
                         <div class="card-image">
-                            <img src="img/slytherin.jpeg" alt="Magical School 2">
+                            <img src="assets/img/slytherin.jpeg" alt="Magical School 2">
                         </div>
                         <div class="card-overlay">
                             <h3 class="arabic-text">Slytherin</h3>
@@ -79,7 +79,7 @@
                 <div class="school-card">
                     <div class="card-frame">
                         <div class="card-image">
-                            <img src="img/Ravenclaw.jpeg" alt="Magical School 3">
+                            <img src="assets/img/Ravenclaw.jpeg" alt="Magical School 3">
                         </div>
                         <div class="card-overlay">
                             <h3 class="arabic-text">Ravenclaw</h3>
@@ -89,7 +89,7 @@
                 <div class="school-card">
                     <div class="card-frame">
                         <div class="card-image">
-                            <img src="img/Hufflepuff.jpeg" alt="Magical School 4">
+                            <img src="assets/img/Hufflepuff.jpeg" alt="Magical School 4">
                         </div>
                         <div class="card-overlay">
                             <h3 class="arabic-text">Hufflepuff</h3>
@@ -281,15 +281,18 @@
     <footer class="main-footer">
         <div class="container">
             <div class="watermark">
-                <img src="img/logo.jpeg" alt="Magical Academy Logo">
+                <img src="assets/img/logo.jpeg" alt="Magical Academy Logo">
             </div>
             <p>&copy; 2025 Harry Potter. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- JavaScript files - load in order: config, helpers, main -->
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/helpers.js"></script>
+    <script src="assets/js/main.improved.js"></script>
     <script>
-        // Set background music volume
+        // Set background music volume (fallback if needed)
         document.addEventListener('DOMContentLoaded', function() {
             const backgroundMusic = document.getElementById('background-music');
             if (backgroundMusic) {
