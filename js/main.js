@@ -262,27 +262,3 @@ function addScrollEffects() {
     });
 }
 
-// Function to show music control button if autoplay is blocked
-function showMusicButton() {
-    const musicButton = document.createElement('div');
-    musicButton.id = 'music-control';
-    musicButton.innerHTML = `
-        <button id="play-music-btn">
-            🎵 Play Background Music
-        </button>
-    `;
-    musicButton.style.position = 'fixed';
-    musicButton.style.bottom = '20px';
-    musicButton.style.right = '20px';
-    musicButton.style.zIndex = '1000';
-    
-    document.body.appendChild(musicButton);
-    
-    document.getElementById('play-music-btn').addEventListener('click', function() {
-        const backgroundMusic = document.getElementById('background-music');
-        if (backgroundMusic) {
-            backgroundMusic.play();
-            musicButton.style.display = 'none';
-        }
-    });
-}
